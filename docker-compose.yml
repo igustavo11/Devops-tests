@@ -1,0 +1,13 @@
+
+
+services:
+  api:
+    build: .
+    container_name: ellis-api
+    ports:
+      - "8001:8001"
+    volumes:
+      - .:/app
+    environment:
+      - DEBUG=1
+    restart: unless-stopped
